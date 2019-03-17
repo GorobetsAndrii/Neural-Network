@@ -26,30 +26,106 @@ public class Main extends Application {
         ArrayList<Double> list = new ArrayList<>();
         ArrayList<Double> result = new ArrayList<>();
         ArrayList<Pair<ArrayList<Double>,Integer>> lst = new ArrayList<>();
-        list.add(1.0);
-        list.add(0.0);
-        list.add(1.0);
-        list.add(0.0);
-        list.add(1.0);
-        list.add(0.0);
-        list.add(1.0);
-        list.add(0.0);
-        list.add(1.0);
-        list.add(0.0);
-        list.add(0.0);
-        list.add(0.0);
-        list.add(0.0);
-        list.add(1.0);
-        list.add(0.0);
 
-        lst.add(new Pair<>(list,3));
+        //0
+        list.add(1.0);list.add(1.0);list.add(1.0);
+        list.add(1.0);list.add(0.0);list.add(1.0);
+        list.add(1.0);list.add(0.0);list.add(1.0);
+        list.add(1.0);list.add(0.0);list.add(1.0);
+        list.add(1.0);list.add(1.0);list.add(1.0);
+        lst.add(new Pair<>(list,0));
+        //list.clear();
+//        //1
+//        list.add(0.0);list.add(0.0);list.add(1.0);
+//        list.add(0.0);list.add(0.0);list.add(1.0);
+//        list.add(0.0);list.add(0.0);list.add(1.0);
+//        list.add(0.0);list.add(0.0);list.add(1.0);
+//        list.add(0.0);list.add(0.0);list.add(1.0);
+//        lst.add(new Pair<>(list,1));
+//        list.clear();
+//        //2
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        list.add(0.0);list.add(0.0);list.add(1.0);
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        list.add(1.0);list.add(0.0);list.add(0.0);
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        lst.add(new Pair<>(list,2));
+//        list.clear();
+//        //3
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        list.add(0.0);list.add(0.0);list.add(1.0);
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        list.add(0.0);list.add(0.0);list.add(1.0);
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        lst.add(new Pair<>(list,3));
+//        list.clear();
+//        //4
+//        list.add(1.0);list.add(0.0);list.add(1.0);
+//        list.add(1.0);list.add(0.0);list.add(1.0);
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        list.add(0.0);list.add(0.0);list.add(1.0);
+//        list.add(0.0);list.add(0.0);list.add(1.0);
+//        lst.add(new Pair<>(list,4));
+//        list.clear();
+//        //5
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        list.add(1.0);list.add(0.0);list.add(0.0);
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        list.add(0.0);list.add(0.0);list.add(1.0);
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        lst.add(new Pair<>(list,5));
+//        list.clear();
+//        //6
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        list.add(1.0);list.add(0.0);list.add(0.0);
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        list.add(1.0);list.add(0.0);list.add(1.0);
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        lst.add(new Pair<>(list,6));
+//        list.clear();
+//        //7
+//        list.add(7.0);list.add(7.0);list.add(7.0);
+//        list.add(0.0);list.add(0.0);list.add(7.0);
+//        list.add(0.0);list.add(0.0);list.add(7.0);
+//        list.add(0.0);list.add(0.0);list.add(7.0);
+//        list.add(0.0);list.add(0.0);list.add(7.0);
+//        lst.add(new Pair<>(list,7));
+//        list.clear();
+//        //8
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        list.add(1.0);list.add(0.0);list.add(1.0);
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        list.add(1.0);list.add(0.0);list.add(1.0);
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        lst.add(new Pair<>(list,8));
+//        list.clear();
+//        //9
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        list.add(1.0);list.add(0.0);list.add(1.0);
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        list.add(0.0);list.add(0.0);list.add(1.0);
+//        list.add(1.0);list.add(1.0);list.add(1.0);
+//        lst.add(new Pair<>(list,9));
+//        list.clear();
+
         Network net = new Network();
-        //result = net.Predict(list);
-        //net.Training(lst,1,1);
+        net.Training(lst,1000,0.05);
 
-//        for(Double d : result){
-//            System.out.println(d);
-//        }
+        //6
+        list.add(1.0);list.add(1.0);list.add(1.0);
+        list.add(1.0);list.add(0.0);list.add(0.0);
+        list.add(1.0);list.add(1.0);list.add(1.0);
+        list.add(1.0);list.add(0.0);list.add(1.0);
+        list.add(1.0);list.add(1.0);list.add(1.0);
+
+        result = net.Predict(list);
+        System.out.println("\n\n\n");
+        System.out.println("result");
+        for(Double d : result){
+            System.out.println(d);
+        }
+
+
         launch(args);
     }
 }
