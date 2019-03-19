@@ -10,8 +10,8 @@ public class Network {
     ArrayList<Neuron> Hidden_Layer_2;
     ArrayList<Double> Output_Layer;
     private int Input_size = 15;
-    private int Hidden_1_size = 70;
-    private int Hidden_2_size = 30;
+    private int Hidden_1_size = 40;
+    private int Hidden_2_size = 20;
     private int Out_size = 10;
 
     public Network(){
@@ -20,9 +20,9 @@ public class Network {
         Hidden_Layer_2 = new ArrayList<>();
         Output_Layer = new ArrayList<>();
 
-//        for (int i = 0; i < Input_size; ++i){
-//            Input_Layer.add(new Neuron(Hidden_1_size));
-//        }
+        for (int i = 0; i < Input_size; ++i){
+            Input_Layer.add(new Neuron(Hidden_1_size));
+        }
         for (int i = 0; i < Hidden_1_size; ++i){
             Hidden_Layer_1.add(new Neuron(Hidden_2_size));
         }
@@ -35,8 +35,8 @@ public class Network {
     }
 
     public ArrayList<Double> Predict(ArrayList<Double> input_values){
-        for (int i = 0; i < input_values.size(); ++i){
-            Input_Layer.add(new Neuron(input_values.get(i),Hidden_1_size));
+        for (int i = 0; i < Input_size; ++i){
+            Input_Layer.get(i).setInput(input_values.get(i));
         }
 
         for(int i = 0; i < Hidden_1_size; ++i){
@@ -85,7 +85,7 @@ public class Network {
                 //Save errors and weights_delta for this predict
                 for(int l = 0; l < Out_size; ++l){
                     if(l == Train.get(j).getValue()-1){
-                        out_error.add(Math.abs(predict.get(l)));
+                        out_error.add(predict.get(l));
                     }else{
                         out_error.add(predict.get(l) - 0);
                     }

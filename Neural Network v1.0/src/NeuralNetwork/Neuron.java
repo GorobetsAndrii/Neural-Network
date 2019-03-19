@@ -13,7 +13,7 @@ public class Neuron {
         this.input = in;
         Random random = new Random();
         for(int i = 0; i < size; ++i){
-            this.weights.add(new Double((1 + (30 - 1)*random.nextDouble())/100));
+            this.weights.add(new Double((1 + (70 - 1)*random.nextDouble())/100));
         }
     }
 
@@ -21,7 +21,7 @@ public class Neuron {
         weights = new ArrayList<>();
         Random random = new Random();
         for(int i = 0; i < size; ++i){
-            this.weights.add(new Double((1 + (30 - 1)*random.nextDouble())/100));
+            this.weights.add(new Double((1 + (70 - 1)*random.nextDouble())/100));
         }
     }
 
