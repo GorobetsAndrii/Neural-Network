@@ -51,87 +51,94 @@ public class Main extends Application {
         list1.add(0.0);list1.add(0.0);list1.add(1.0);
         list1.add(0.0);list1.add(0.0);list1.add(1.0);
         lst.add(new Pair<>(list1,1));
-
-       //2
-        list2.add(1.0);list2.add(1.0);list2.add(1.0);
-        list2.add(0.0);list2.add(0.0);list2.add(1.0);
-        list2.add(1.0);list2.add(1.0);list2.add(1.0);
-        list2.add(1.0);list2.add(0.0);list2.add(0.0);
-        list2.add(1.0);list2.add(1.0);list2.add(1.0);
-        lst.add(new Pair<>(list2,2));
-
-        //3
-        list3.add(1.0);list3.add(1.0);list3.add(1.0);
-        list3.add(0.0);list3.add(0.0);list3.add(1.0);
-        list3.add(1.0);list3.add(1.0);list3.add(1.0);
-        list3.add(0.0);list3.add(0.0);list3.add(1.0);
-        list3.add(1.0);list3.add(1.0);list3.add(1.0);
-        lst.add(new Pair<>(list3,3));
-
-        //4
-        list4.add(1.0);list4.add(0.0);list4.add(1.0);
-        list4.add(1.0);list4.add(0.0);list4.add(1.0);
-        list4.add(1.0);list4.add(1.0);list4.add(1.0);
-        list4.add(0.0);list4.add(0.0);list4.add(1.0);
-        list4.add(0.0);list4.add(0.0);list4.add(1.0);
-        lst.add(new Pair<>(list4,4));
-
-        //5
-        list5.add(1.0);list5.add(1.0);list5.add(1.0);
-        list5.add(1.0);list5.add(0.0);list5.add(0.0);
-        list5.add(1.0);list5.add(1.0);list5.add(1.0);
-        list5.add(0.0);list5.add(0.0);list5.add(1.0);
-        list5.add(1.0);list5.add(1.0);list5.add(1.0);
-        lst.add(new Pair<>(list5,5));
-
-        //6
-        list6.add(1.0);list6.add(1.0);list6.add(1.0);
-        list6.add(1.0);list6.add(0.0);list6.add(0.0);
-        list6.add(1.0);list6.add(1.0);list6.add(1.0);
-        list6.add(1.0);list6.add(0.0);list6.add(1.0);
-        list6.add(1.0);list6.add(1.0);list6.add(1.0);
-        lst.add(new Pair<>(list6,6));
-
-        //7
-        list7.add(7.0);list7.add(7.0);list7.add(7.0);
-        list7.add(0.0);list7.add(0.0);list7.add(7.0);
-        list7.add(0.0);list7.add(0.0);list7.add(7.0);
-        list7.add(0.0);list7.add(0.0);list7.add(7.0);
-        list7.add(0.0);list7.add(0.0);list7.add(7.0);
-        lst.add(new Pair<>(list7,7));
-
-        //8
-        list8.add(1.0);list8.add(1.0);list8.add(1.0);
-        list8.add(1.0);list8.add(0.0);list8.add(1.0);
-        list8.add(1.0);list8.add(1.0);list8.add(1.0);
-        list8.add(1.0);list8.add(0.0);list8.add(1.0);
-        list8.add(1.0);list8.add(1.0);list8.add(1.0);
-        lst.add(new Pair<>(list8,8));
-
-        //9
-        list9.add(1.0);list9.add(1.0);list9.add(1.0);
-        list9.add(1.0);list9.add(0.0);list9.add(1.0);
-        list9.add(1.0);list9.add(1.0);list9.add(1.0);
-        list9.add(0.0);list9.add(0.0);list9.add(1.0);
-        list9.add(1.0);list9.add(1.0);list9.add(1.0);
-        lst.add(new Pair<>(list9,9));
+//
+//       //2
+//        list2.add(1.0);list2.add(1.0);list2.add(1.0);
+//        list2.add(0.0);list2.add(0.0);list2.add(1.0);
+//        list2.add(1.0);list2.add(1.0);list2.add(1.0);
+//        list2.add(1.0);list2.add(0.0);list2.add(0.0);
+//        list2.add(1.0);list2.add(1.0);list2.add(1.0);
+//        lst.add(new Pair<>(list2,2));
+//
+//        //3
+//        list3.add(1.0);list3.add(1.0);list3.add(1.0);
+//        list3.add(0.0);list3.add(0.0);list3.add(1.0);
+//        list3.add(1.0);list3.add(1.0);list3.add(1.0);
+//        list3.add(0.0);list3.add(0.0);list3.add(1.0);
+//        list3.add(1.0);list3.add(1.0);list3.add(1.0);
+//        lst.add(new Pair<>(list3,3));
+//
+//        //4
+//        list4.add(1.0);list4.add(0.0);list4.add(1.0);
+//        list4.add(1.0);list4.add(0.0);list4.add(1.0);
+//        list4.add(1.0);list4.add(1.0);list4.add(1.0);
+//        list4.add(0.0);list4.add(0.0);list4.add(1.0);
+//        list4.add(0.0);list4.add(0.0);list4.add(1.0);
+//        lst.add(new Pair<>(list4,4));
+//
+//        //5
+//        list5.add(1.0);list5.add(1.0);list5.add(1.0);
+//        list5.add(1.0);list5.add(0.0);list5.add(0.0);
+//        list5.add(1.0);list5.add(1.0);list5.add(1.0);
+//        list5.add(0.0);list5.add(0.0);list5.add(1.0);
+//        list5.add(1.0);list5.add(1.0);list5.add(1.0);
+//        lst.add(new Pair<>(list5,5));
+//
+//        //6
+//        list6.add(1.0);list6.add(1.0);list6.add(1.0);
+//        list6.add(1.0);list6.add(0.0);list6.add(0.0);
+//        list6.add(1.0);list6.add(1.0);list6.add(1.0);
+//        list6.add(1.0);list6.add(0.0);list6.add(1.0);
+//        list6.add(1.0);list6.add(1.0);list6.add(1.0);
+//        lst.add(new Pair<>(list6,6));
+//
+//        //7
+//        list7.add(7.0);list7.add(7.0);list7.add(7.0);
+//        list7.add(0.0);list7.add(0.0);list7.add(7.0);
+//        list7.add(0.0);list7.add(0.0);list7.add(7.0);
+//        list7.add(0.0);list7.add(0.0);list7.add(7.0);
+//        list7.add(0.0);list7.add(0.0);list7.add(7.0);
+//        lst.add(new Pair<>(list7,7));
+//
+//        //8
+//        list8.add(1.0);list8.add(1.0);list8.add(1.0);
+//        list8.add(1.0);list8.add(0.0);list8.add(1.0);
+//        list8.add(1.0);list8.add(1.0);list8.add(1.0);
+//        list8.add(1.0);list8.add(0.0);list8.add(1.0);
+//        list8.add(1.0);list8.add(1.0);list8.add(1.0);
+//        lst.add(new Pair<>(list8,8));
+//
+//        //9
+//        list9.add(1.0);list9.add(1.0);list9.add(1.0);
+//        list9.add(1.0);list9.add(0.0);list9.add(1.0);
+//        list9.add(1.0);list9.add(1.0);list9.add(1.0);
+//        list9.add(0.0);list9.add(0.0);list9.add(1.0);
+//        list9.add(1.0);list9.add(1.0);list9.add(1.0);
+//        lst.add(new Pair<>(list9,9));
 
 
         Network net = new Network();
         //0.009  1000
         //2000 0.005
-        net.Training(lst,4000,0.007);
-        list1.clear();
+        net.Training(lst,10000,0.09);
+        //list1.clear();
         //1
-        list1.add(0.0);list1.add(0.0);list1.add(1.0);
-        list1.add(0.0);list1.add(0.0);list1.add(1.0);
-        list1.add(0.0);list1.add(0.0);list1.add(1.0);
-        list1.add(0.0);list1.add(0.0);list1.add(1.0);
-        list1.add(0.0);list1.add(0.0);list1.add(1.0);
+//        list1.add(0.0);list1.add(0.0);list1.add(0.0);
+//        list1.add(0.0);list1.add(0.0);list1.add(0.0);
+//        list1.add(0.0);list1.add(0.0);list1.add(0.0);
+//        list1.add(0.0);list1.add(0.0);list1.add(0.0);
+//        list1.add(0.0);list1.add(0.0);list1.add(0.0);
+
+        result = net.Predict(list);
+        System.out.println("\n\n\n");
+        System.out.println("result for 0");
+        for(Double d : result){
+            System.out.println(d);
+        }
 
         result = net.Predict(list1);
         System.out.println("\n\n\n");
-        System.out.println("result");
+        System.out.println("result for 1");
         for(Double d : result){
             System.out.println(d);
         }
