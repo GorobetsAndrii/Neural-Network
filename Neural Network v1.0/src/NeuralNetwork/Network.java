@@ -100,31 +100,6 @@ public class Network {
                 }
 
                 //--------------------------------------------------------------------------------------------------
-
-//                for(int p = 0; p < predict.size(); ++p){
-//                    for(int h2= 0; h2 < Hidden_2_size; ++h2){
-//                        Hidden_Layer_2.get(h2).weights.set(p,Hidden_Layer_2.get(h2).weights.get(p)-Hidden_Layer_2.get(h2).output*weights_delta.get(p)*Learning_rate);
-//                        Hidden_2_error.add(Hidden_Layer_2.get(h2).weights.get(p)*weights_delta.get(p));
-//                        Hidden_2_weights_delta.add(Hidden_2_error.get(h2)*Function.sigmoid_dx(Hidden_Layer_2.get(h2).output));
-//                        for(int h1= 0; h1 < Hidden_1_size; ++h1){
-//                            Hidden_Layer_1.get(h1).weights.set(h2,Hidden_Layer_1.get(h1).weights.get(h2)-Hidden_Layer_1.get(h1).output*Hidden_2_weights_delta.get(h2)*Learning_rate);
-//                            Hidden_1_error.add(Hidden_Layer_1.get(h1).weights.get(h2)*Hidden_2_weights_delta.get(h2));
-//                            Hidden_1_weights_delta.add(Hidden_1_error.get(h1)*Function.sigmoid_dx(Hidden_Layer_1.get(h1).output));
-//                            for(int in = 0; in < Input_size; ++in){
-//                                Input_Layer.get(in).weights.set(h1,Input_Layer.get(in).weights.get(h1)-Input_Layer.get(in).output*Hidden_1_weights_delta.get(h1)*Learning_rate);
-//                                Input_error.add(Input_Layer.get(in).weights.get(h1)*Hidden_1_weights_delta.get(h1));
-//                                Input_weights_delta.add(Input_error.get(in)*Function.sigmoid_dx(Input_Layer.get(in).output));
-//                            }
-//                            Input_error.clear();
-//                            Input_weights_delta.clear();
-//                        }
-//                        Hidden_1_error.clear();
-//                        Hidden_1_weights_delta.clear();
-//                    }
-//                    Hidden_2_error.clear();
-//                    Hidden_2_weights_delta.clear();
-//                }
-
                 for(int p = 0; p < predict.size(); ++p){
                     for(int h2= 0; h2 < Hidden_2_size; ++h2){
                         Hidden_Layer_2.get(h2).weights.set(p,Hidden_Layer_2.get(h2).weights.get(p)-Hidden_Layer_2.get(h2).output*weights_delta.get(p)*Learning_rate);
