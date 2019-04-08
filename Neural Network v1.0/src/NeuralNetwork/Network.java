@@ -69,11 +69,6 @@ public class Network {
     }
 
     public void Training(ArrayList<Pair<ArrayList<Double>,Integer>> Train,int Epochs,double Learning_rate){
-        for(int i = 0; i<1;++i){
-            for(int j=0;j<Hidden_Layer_2.get(i).weights.size();++j){
-                System.out.println(Hidden_Layer_2.get(i).weights.get(j));
-            }
-        }
         ArrayList<Double> predict = new ArrayList<>();
         ArrayList<Double> out_error = new ArrayList<>();
         ArrayList<Double> weights_delta = new ArrayList<>();
@@ -132,13 +127,6 @@ public class Network {
 
                 out_error.clear();
                 weights_delta.clear();
-            }
-        }
-        System.out.println("\n\n\n");
-        System.out.println("Fixed");
-        for(int i = 0; i<1;++i){
-            for(int j=0;j<Hidden_Layer_2.get(i).weights.size();++j){
-                System.out.println(Hidden_Layer_2.get(i).weights.get(j));
             }
         }
     }
