@@ -5,10 +5,10 @@ import javafx.util.Pair;
 import java.util.ArrayList;
 
 public class Network {
-    ArrayList<Neuron> Input_Layer;
-    ArrayList<Neuron> Hidden_Layer_1;
-    ArrayList<Neuron> Hidden_Layer_2;
-    ArrayList<Double> Output_Layer;
+    private ArrayList<Neuron> Input_Layer;
+    private ArrayList<Neuron> Hidden_Layer_1;
+    private ArrayList<Neuron> Hidden_Layer_2;
+    private ArrayList<Double> Output_Layer;
     private int Input_size = 15;
     private int Hidden_1_size = 40;
     private int Hidden_2_size = 20;
@@ -131,10 +131,27 @@ public class Network {
         }
     }
 
-    public void print(){
-        for(Neuron n : Input_Layer){
-            System.out.println(n.input);
-        }
-        System.out.println(this.Hidden_Layer_2.size());
+    public ArrayList<Neuron> getInput_Layer() {
+        return (ArrayList<Neuron>) Input_Layer.clone();
+    }
+
+    public ArrayList<Neuron> getHidden_Layer_1() {
+        return (ArrayList<Neuron>) Hidden_Layer_1.clone();
+    }
+
+    public ArrayList<Neuron> getHidden_Layer_2() {
+        return (ArrayList<Neuron>) Hidden_Layer_2.clone();
+    }
+
+    public int getInput_size() {
+        return Input_size;
+    }
+
+    public int getHidden_1_size() {
+        return Hidden_1_size;
+    }
+
+    public int getHidden_2_size() {
+        return Hidden_2_size;
     }
 }
