@@ -2,6 +2,7 @@ package sample;
 import Exceptions.WrongMatrixSize;
 import Matrix.*;
 import NeuralNetwork.*;
+import DataBase.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -156,7 +157,7 @@ public class Main extends Application {
 
 
         Network net = new Network();
-        net.Training(lst,17000,0.07);
+        //net.Training(lst,17000,0.07);
 
         result = net.Predict(list);
         System.out.println("\n\n\n");
@@ -227,6 +228,9 @@ public class Main extends Application {
         for(Double d : result){
             System.out.println(d);
         }
+
+        NetworkToFile n = new NetworkToFile("NeuronWeights.txt");
+        n.WriteToFileNeuronWeights(net);
 
         launch(args);
     }

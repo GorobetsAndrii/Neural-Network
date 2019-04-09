@@ -5,10 +5,10 @@ import javafx.util.Pair;
 import java.util.ArrayList;
 
 public class Network {
-    private ArrayList<Neuron> Input_Layer;
-    private ArrayList<Neuron> Hidden_Layer_1;
-    private ArrayList<Neuron> Hidden_Layer_2;
-    private ArrayList<Double> Output_Layer;
+    public ArrayList<Neuron> Input_Layer;
+    public ArrayList<Neuron> Hidden_Layer_1;
+    public ArrayList<Neuron> Hidden_Layer_2;
+    public ArrayList<Double> Output_Layer;
     private int Input_size = 15;
     private int Hidden_1_size = 40;
     private int Hidden_2_size = 20;
@@ -129,18 +129,6 @@ public class Network {
                 weights_delta.clear();
             }
         }
-    }
-
-    public ArrayList<Neuron> getInput_Layer() {
-        return (ArrayList<Neuron>) Input_Layer.clone();
-    }
-
-    public ArrayList<Neuron> getHidden_Layer_1() {
-        return (ArrayList<Neuron>) Hidden_Layer_1.clone();
-    }
-
-    public ArrayList<Neuron> getHidden_Layer_2() {
-        return (ArrayList<Neuron>) Hidden_Layer_2.clone();
     }
 
     public int getInput_size() {
