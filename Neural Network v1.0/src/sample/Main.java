@@ -229,8 +229,8 @@ public class Main extends Application {
             System.out.println(d);
         }
 
-        NetworkToFile n = new NetworkToFile("NeuronWeights.txt");
-        n.WriteToFileNeuronWeights(net);
+        NetworkToFile n = new NetworkToFile("Network.bin");
+        n.WriteNetworkToFile(net);
 
         launch(args);
     }

@@ -2,9 +2,11 @@ package NeuralNetwork;
 
 import javafx.util.Pair;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Network {
+public class Network implements Serializable {
+    private static final long serialVersionUID = -8900068488415936088L;
     public ArrayList<Neuron> Input_Layer;
     public ArrayList<Neuron> Hidden_Layer_1;
     public ArrayList<Neuron> Hidden_Layer_2;
@@ -129,17 +131,5 @@ public class Network {
                 weights_delta.clear();
             }
         }
-    }
-
-    public int getInput_size() {
-        return Input_size;
-    }
-
-    public int getHidden_1_size() {
-        return Hidden_1_size;
-    }
-
-    public int getHidden_2_size() {
-        return Hidden_2_size;
     }
 }

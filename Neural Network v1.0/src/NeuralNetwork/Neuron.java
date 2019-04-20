@@ -1,9 +1,10 @@
 package NeuralNetwork;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Neuron {
+public class Neuron implements Serializable {
     public ArrayList<Double> weights;
     public double input;
     public double output;
@@ -32,6 +33,5 @@ public class Neuron {
     public void activate(){
         this.output = Function.sigmoid(input);
     }
-
 
 }
