@@ -1,6 +1,7 @@
 package sample;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -12,6 +13,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 public class Controller {
+    Model model = new Model();
+
     @FXML
     private ResourceBundle resources;
 
@@ -85,10 +88,26 @@ public class Controller {
     private Label title;
 
     @FXML
-    private Rectangle rectangles[] = {pixel1,pixel2,pixel3,pixel4,pixel5,pixel6,pixel7,pixel8,pixel9,pixel10,pixel11,pixel12,pixel13,pixel14,pixel15};
+    private ArrayList<Rectangle> rectangles = new ArrayList<>();
 
     @FXML
     void initialize() {
+        rectangles.add(pixel1);
+        rectangles.add(pixel2);
+        rectangles.add(pixel3);
+        rectangles.add(pixel4);
+        rectangles.add(pixel5);
+        rectangles.add(pixel6);
+        rectangles.add(pixel7);
+        rectangles.add(pixel8);
+        rectangles.add(pixel9);
+        rectangles.add(pixel10);
+        rectangles.add(pixel11);
+        rectangles.add(pixel12);
+        rectangles.add(pixel13);
+        rectangles.add(pixel14);
+        rectangles.add(pixel15);
+
         predict.setOnAction(event -> {
             System.out.println("PREDICT!!!!!!!!!!!!!!!!!!");
         });
@@ -111,6 +130,15 @@ public class Controller {
 
         reset.setOnAction(event -> {
             ResetClick();
+        });
+
+        predict.setOnAction(event -> {
+            ArrayList<Double> temporary = new ArrayList<>();
+            for(Rectangle r: rectangles){
+                if(r.getFill().equals(Color.web("#012763"))) temporary.add(1.0);
+                else temporary.add(0.0);
+            }
+            model.PredictAndChart(temporary);
         });
 
     }
