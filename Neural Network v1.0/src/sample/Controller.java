@@ -8,10 +8,10 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 public class Controller {
-
     @FXML
     private ResourceBundle resources;
 
@@ -85,30 +85,63 @@ public class Controller {
     private Label title;
 
     @FXML
-    void initialize() {
-        assert vbox != null : "fx:id=\"vbox\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert mainpane != null : "fx:id=\"mainpane\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert window != null : "fx:id=\"window\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert pixel1 != null : "fx:id=\"pixel1\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert pixel2 != null : "fx:id=\"pixel2\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert pixel3 != null : "fx:id=\"pixel3\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert pixel4 != null : "fx:id=\"pixel4\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert pixel5 != null : "fx:id=\"pixel5\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert pixel6 != null : "fx:id=\"pixel6\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert pixel7 != null : "fx:id=\"pixel7\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert pixel8 != null : "fx:id=\"pixel8\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert pixel9 != null : "fx:id=\"pixel9\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert pixel10 != null : "fx:id=\"pixel10\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert pixel11 != null : "fx:id=\"pixel11\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert pixel12 != null : "fx:id=\"pixel12\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert pixel15 != null : "fx:id=\"pixel15\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert pixel14 != null : "fx:id=\"pixel14\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert pixel13 != null : "fx:id=\"pixel13\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert reset != null : "fx:id=\"reset\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert predict != null : "fx:id=\"predict\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert panetitle != null : "fx:id=\"panetitle\" was not injected: check your FXML file 'Scene1full.fxml'.";
-        assert title != null : "fx:id=\"title\" was not injected: check your FXML file 'Scene1full.fxml'.";
+    private Rectangle rectangles[] = {pixel1,pixel2,pixel3,pixel4,pixel5,pixel6,pixel7,pixel8,pixel9,pixel10,pixel11,pixel12,pixel13,pixel14,pixel15};
 
+    @FXML
+    void initialize() {
+        predict.setOnAction(event -> {
+            System.out.println("PREDICT!!!!!!!!!!!!!!!!!!");
+        });
+
+        PixelClick(pixel1);
+        PixelClick(pixel2);
+        PixelClick(pixel3);
+        PixelClick(pixel4);
+        PixelClick(pixel5);
+        PixelClick(pixel6);
+        PixelClick(pixel7);
+        PixelClick(pixel8);
+        PixelClick(pixel9);
+        PixelClick(pixel10);
+        PixelClick(pixel11);
+        PixelClick(pixel12);
+        PixelClick(pixel13);
+        PixelClick(pixel14);
+        PixelClick(pixel15);
+
+        reset.setOnAction(event -> {
+            ResetClick();
+        });
+
+    }
+
+    public Button getPredict() {
+        return predict;
+    }
+
+    private void PixelClick(Rectangle pixel){
+        pixel.setOnMouseClicked(event -> {
+            if(pixel.getFill().equals(Color.web("#1e90ff"))) pixel.setFill(Color.web("#012763"));
+            else pixel.setFill(Color.web("#1e90ff"));
+        });
+    }
+
+    private void ResetClick(){
+        pixel1.setFill(Color.web("#1e90ff"));
+        pixel2.setFill(Color.web("#1e90ff"));
+        pixel3.setFill(Color.web("#1e90ff"));
+        pixel4.setFill(Color.web("#1e90ff"));
+        pixel5.setFill(Color.web("#1e90ff"));
+        pixel6.setFill(Color.web("#1e90ff"));
+        pixel7.setFill(Color.web("#1e90ff"));
+        pixel8.setFill(Color.web("#1e90ff"));
+        pixel9.setFill(Color.web("#1e90ff"));
+        pixel10.setFill(Color.web("#1e90ff"));
+        pixel11.setFill(Color.web("#1e90ff"));
+        pixel12.setFill(Color.web("#1e90ff"));
+        pixel13.setFill(Color.web("#1e90ff"));
+        pixel14.setFill(Color.web("#1e90ff"));
+        pixel15.setFill(Color.web("#1e90ff"));
     }
 }
 
