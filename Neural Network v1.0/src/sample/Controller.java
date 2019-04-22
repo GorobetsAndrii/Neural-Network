@@ -108,9 +108,6 @@ public class Controller {
         rectangles.add(pixel14);
         rectangles.add(pixel15);
 
-        predict.setOnAction(event -> {
-            System.out.println("PREDICT!!!!!!!!!!!!!!!!!!");
-        });
 
         PixelClick(pixel1);
         PixelClick(pixel2);
