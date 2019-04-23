@@ -16,7 +16,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("Scene1full.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("AI by Andrii Gorobets");
         primaryStage.setScene(new Scene(root, 640, 418));
         primaryStage.show();
     }
@@ -93,11 +93,11 @@ public class Main extends Application {
 //        lst.add(new Pair<>(list6,6));
 //
 //        //7
-//        list7.add(7.0);list7.add(7.0);list7.add(7.0);
-//        list7.add(0.0);list7.add(0.0);list7.add(7.0);
-//        list7.add(0.0);list7.add(0.0);list7.add(7.0);
-//        list7.add(0.0);list7.add(0.0);list7.add(7.0);
-//        list7.add(0.0);list7.add(0.0);list7.add(7.0);
+//        list7.add(1.0);list7.add(1.0);list7.add(1.0);
+//        list7.add(0.0);list7.add(0.0);list7.add(1.0);
+//        list7.add(0.0);list7.add(0.0);list7.add(1.0);
+//        list7.add(0.0);list7.add(0.0);list7.add(1.0);
+//        list7.add(0.0);list7.add(0.0);list7.add(1.0);
 //        lst.add(new Pair<>(list7,7));
 //
 //        //8
