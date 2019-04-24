@@ -109,24 +109,17 @@ public class Controller {
         rectangles.add(pixel15);
 
 
-        PixelClick(pixel1);
-        PixelClick(pixel2);
-        PixelClick(pixel3);
-        PixelClick(pixel4);
-        PixelClick(pixel5);
-        PixelClick(pixel6);
-        PixelClick(pixel7);
-        PixelClick(pixel8);
-        PixelClick(pixel9);
-        PixelClick(pixel10);
-        PixelClick(pixel11);
-        PixelClick(pixel12);
-        PixelClick(pixel13);
-        PixelClick(pixel14);
-        PixelClick(pixel15);
+        for(Rectangle pixel : rectangles){
+            pixel.setOnMouseClicked(event -> {
+                if(pixel.getFill().equals(Color.web("#1e90ff"))) pixel.setFill(Color.web("#012763"));
+                else pixel.setFill(Color.web("#1e90ff"));
+            });
+        }
 
         reset.setOnAction(event -> {
-            ResetClick();
+            for(Rectangle pixel : rectangles){
+                pixel.setFill(Color.web("#1e90ff"));
+            }
         });
 
         predict.setOnAction(event -> {
@@ -137,36 +130,6 @@ public class Controller {
             }
             model.PredictAndChart(temporary);
         });
-
-    }
-
-    public Button getPredict() {
-        return predict;
-    }
-
-    private void PixelClick(Rectangle pixel){
-        pixel.setOnMouseClicked(event -> {
-            if(pixel.getFill().equals(Color.web("#1e90ff"))) pixel.setFill(Color.web("#012763"));
-            else pixel.setFill(Color.web("#1e90ff"));
-        });
-    }
-
-    private void ResetClick(){
-        pixel1.setFill(Color.web("#1e90ff"));
-        pixel2.setFill(Color.web("#1e90ff"));
-        pixel3.setFill(Color.web("#1e90ff"));
-        pixel4.setFill(Color.web("#1e90ff"));
-        pixel5.setFill(Color.web("#1e90ff"));
-        pixel6.setFill(Color.web("#1e90ff"));
-        pixel7.setFill(Color.web("#1e90ff"));
-        pixel8.setFill(Color.web("#1e90ff"));
-        pixel9.setFill(Color.web("#1e90ff"));
-        pixel10.setFill(Color.web("#1e90ff"));
-        pixel11.setFill(Color.web("#1e90ff"));
-        pixel12.setFill(Color.web("#1e90ff"));
-        pixel13.setFill(Color.web("#1e90ff"));
-        pixel14.setFill(Color.web("#1e90ff"));
-        pixel15.setFill(Color.web("#1e90ff"));
     }
 }
 
